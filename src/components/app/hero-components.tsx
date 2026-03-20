@@ -112,7 +112,7 @@ const CardExample = () => (
             <Input
               id="email"
               type="email"
-              placeholder="m@example.com"
+              placeholder="joshuamanuel@gmail.com"
               required
               tabIndex={-1}
             />
@@ -229,12 +229,11 @@ const ScrollAreaExample = () => (
     inert
     className="rounded-base h-[150px] w-full text-main-foreground border-2 border-border bg-main p-4 shadow-shadow"
   >
-    Jokester began sneaking into the castle in the middle of the night and
-    leaving jokes all over the place: under the king&apos;s pillow, in his soup,
-    even in the royal toilet. The king was furious, but he couldn&apos;t seem to
-    stop Jokester. And then, one day, the people of the kingdom discovered that
-    the jokes left by Jokester were so funny that they couldn&apos;t help but
-    laugh. And once they started laughing, they couldn&apos;t stop.
+    Joshua is a full-stack developer who builds web and mobile applications
+    from the ground up. He has shipped a government procurement system for
+    the Bureau of the Treasury (PH) and a Philippine labor law research
+    platform powered by a custom rule-based engine. He cares about code
+    that holds up under real pressure.
   </ScrollArea>
 )
 
