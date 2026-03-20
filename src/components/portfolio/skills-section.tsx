@@ -101,7 +101,7 @@ const skillCategories: { id: string; label: string; skills: Skill[] }[] = [
       { label: "PostgreSQL", icon: SiPostgresql, color: "#4169E1" },
       { label: "MySQL", icon: SiMysql, color: "#4479A1" },
       { label: "MSSQL", icon: FaDatabase as IconComponent, color: "#CC2927" },
-      { label: "SQL Server", icon: FaDatabase as IconComponent, color: "#CC2927" },
+      { label: "Oracle", icon: FaDatabase as IconComponent, color: "#F80000" },
       { label: "Supabase", icon: SiSupabase, color: "#3ECF8E" },
       { label: "Firebase", icon: SiFirebase, color: "#FFCA28" },
     ],
