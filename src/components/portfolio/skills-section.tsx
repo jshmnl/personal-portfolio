@@ -190,7 +190,7 @@ export default function SkillsSection() {
                 key={label}
                 className="flex items-center gap-3 rounded-base border-2 border-border bg-background px-4 py-3 shadow-shadow"
               >
-                <Icon className="shrink-0 text-2xl text-main" />
+                <Icon className="shrink-0 text-2xl" />
                 <span className="font-base text-sm font-medium">{label}</span>
               </div>
             ))}
