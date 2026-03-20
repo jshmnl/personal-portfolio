@@ -1,6 +1,7 @@
 "use client"
 
 import { useState } from "react"
+import type { CSSProperties } from "react"
 
 import { Button } from "@/components/ui/button"
 import {
@@ -15,6 +16,7 @@ import {
   SiReact,
   SiNextdotjs,
   SiHtml5,
+  SiCss,
   SiTailwindcss,
   SiAlpinedotjs,
   SiLaravel,
@@ -30,12 +32,46 @@ import {
   SiFigma,
 } from "react-icons/si"
 import { DiJava } from "react-icons/di"
-import { FaDatabase, FaCode, FaImage, FaPenNib } from "react-icons/fa6"
-import { IconType } from "react-icons"
+import { FaDatabase, FaCode } from "react-icons/fa6"
+
+// Adobe-style badge icons (dark bg + product abbreviation in brand color)
+function AdobePs({ style, className }: { style?: CSSProperties; className?: string }) {
+  return (
+    <svg width="1em" height="1em" viewBox="0 0 24 24" className={className} style={style}>
+      <rect width="24" height="24" rx="3" fill="#001E36" />
+      <text
+        x="12" y="17"
+        textAnchor="middle"
+        fill="#31A8FF"
+        fontSize="9.5"
+        fontFamily="Arial, sans-serif"
+        fontWeight="bold"
+      >Ps</text>
+    </svg>
+  )
+}
+
+function AdobeAi({ style, className }: { style?: CSSProperties; className?: string }) {
+  return (
+    <svg width="1em" height="1em" viewBox="0 0 24 24" className={className} style={style}>
+      <rect width="24" height="24" rx="3" fill="#310000" />
+      <text
+        x="12" y="17"
+        textAnchor="middle"
+        fill="#FF9A00"
+        fontSize="9.5"
+        fontFamily="Arial, sans-serif"
+        fontWeight="bold"
+      >Ai</text>
+    </svg>
+  )
+}
+
+type IconComponent = React.ComponentType<{ style?: CSSProperties; className?: string }>
 
 type Skill = {
   label: string
-  icon: IconType
+  icon: IconComponent
   color: string
 }
 
@@ -49,7 +85,7 @@ const skillCategories: { id: string; label: string; skills: Skill[] }[] = [
       { label: "PHP", icon: SiPhp, color: "#777BB4" },
       { label: "C#", icon: SiSharp, color: "#239120" },
       { label: "Python", icon: SiPython, color: "#3776AB" },
-      { label: "Java", icon: DiJava, color: "#E76F00" },
+      { label: "Java", icon: DiJava as IconComponent, color: "#E76F00" },
       { label: "Kotlin", icon: SiKotlin, color: "#7F52FF" },
       { label: "C/C++", icon: SiCplusplus, color: "#00599C" },
       { label: "VB.NET", icon: SiDotnet, color: "#512BD4" },
@@ -62,7 +98,7 @@ const skillCategories: { id: string; label: string; skills: Skill[] }[] = [
       { label: "React", icon: SiReact, color: "#61DAFB" },
       { label: "Next.js", icon: SiNextdotjs, color: "#000000" },
       { label: "HTML", icon: SiHtml5, color: "#E34F26" },
-      { label: "CSS", icon: FaCode, color: "#1572B6" },
+      { label: "CSS", icon: SiCss, color: "#1572B6" },
       { label: "Tailwind CSS", icon: SiTailwindcss, color: "#06B6D4" },
       { label: "Alpine.js", icon: SiAlpinedotjs, color: "#8BC0D0" },
     ],
@@ -86,8 +122,8 @@ const skillCategories: { id: string; label: string; skills: Skill[] }[] = [
     skills: [
       { label: "PostgreSQL", icon: SiPostgresql, color: "#4169E1" },
       { label: "MySQL", icon: SiMysql, color: "#4479A1" },
-      { label: "MSSQL", icon: FaDatabase, color: "#CC2927" },
-      { label: "SQL Server", icon: FaDatabase, color: "#CC2927" },
+      { label: "MSSQL", icon: FaDatabase as IconComponent, color: "#CC2927" },
+      { label: "SQL Server", icon: FaDatabase as IconComponent, color: "#CC2927" },
       { label: "Supabase", icon: SiSupabase, color: "#3ECF8E" },
       { label: "Firebase", icon: SiFirebase, color: "#FFCA28" },
     ],
@@ -107,9 +143,9 @@ const skillCategories: { id: string; label: string; skills: Skill[] }[] = [
     label: "Design & Tools",
     skills: [
       { label: "Figma", icon: SiFigma, color: "#F24E1E" },
-      { label: "Photoshop", icon: FaImage, color: "#31A8FF" },
-      { label: "Illustrator", icon: FaPenNib, color: "#FF9A00" },
-      { label: "VS Code", icon: FaCode, color: "#007ACC" },
+      { label: "Photoshop", icon: AdobePs, color: "#31A8FF" },
+      { label: "Illustrator", icon: AdobeAi, color: "#FF9A00" },
+      { label: "VS Code", icon: FaCode as IconComponent, color: "#007ACC" },
     ],
   },
 ]
