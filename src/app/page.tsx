@@ -20,17 +20,6 @@ import Star29 from "@/components/stars/s29"
 import Star32 from "@/components/stars/s32"
 import Star37 from "@/components/stars/s37"
 
-function SectionJoin({ label }: { label: string }) {
-  return (
-    <div className="flex items-center justify-center gap-4 bg-main border-y-4 border-border py-2 px-5">
-      <div className="h-px bg-border/40 flex-1" />
-      <span className="text-xs font-heading tracking-widest text-main-foreground/70 uppercase">
-        {label}
-      </span>
-      <div className="h-px bg-border/40 flex-1" />
-    </div>
-  )
-}
 
 export default function Home() {
   return (
@@ -61,13 +50,9 @@ export default function Home() {
       </Marquee>
 
       <AboutSection />
-      <SectionJoin label="Skills & Technologies" />
       <SkillsSection />
-      <SectionJoin label="Projects" />
       <ProjectsSection />
-      <SectionJoin label="Experience" />
       <ExperienceSection />
-      <SectionJoin label="Certifications" />
       <CertificationsSection />
 
       {/* Bottom marquee — TypeScript · React · Laravel · Next.js */}
