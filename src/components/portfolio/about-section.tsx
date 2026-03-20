@@ -83,7 +83,7 @@ export default function AboutSection() {
               </div>
               <div className="flex flex-col gap-4 text-sm font-base leading-relaxed">
                 <p>
-                  During my internship at the Bureau of Treasury (Database Administration
+                  During my internship at the Bureau of the Treasury PH (Database Administration
                   Division), I built a procurement monitoring system used in a government
                   environment. I designed the MSSQL database schema, implemented
                   role-based access control to manage internal users securely, and

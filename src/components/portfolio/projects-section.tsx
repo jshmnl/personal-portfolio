@@ -11,19 +11,19 @@ import {
 const projects = [
   {
     type: "Professional Project",
-    org: "Bureau of the Treasury",
+    org: "Bureau of the Treasury (PH)",
     title: "Procurement Monitoring System",
     description:
-      "A full-stack web application built for the Bureau of the Treasury to streamline and monitor government procurement processes. The system provides real-time tracking, reporting, and end-to-end management of procurement activities, replacing manual workflows with a centralized digital platform.",
-    tags: ["Laravel", "PHP", "MySQL", "Tailwind CSS", "Full-Stack"],
+      "A full-stack web application built for the Bureau of the Treasury (PH) to streamline and monitor government procurement processes. The system provides real-time tracking, reporting, and end-to-end management of procurement activities, replacing manual workflows with a centralized digital platform.",
+    tags: ["Laravel", "PHP", "MSSQL", "Tailwind CSS"],
   },
   {
     type: "Undergraduate Thesis",
     org: "Lyceum of the Philippines Manila",
     title: "Philippine Labor Law Outcome Predictor",
     description:
-      "A full-stack React web application that predicts outcomes of Philippine labor law cases using machine learning. Trained NLP classification models on a curated legal case dataset to provide data-driven insights, helping users understand probable case resolutions under Philippine labor law.",
-    tags: ["React", "Python", "Flask", "Machine Learning", "NLP", "Full-Stack"],
+      "A rule-based legal research platform for Philippine labor law cases. Built a weighted scoring engine that evaluates cases against defined legal factors and produces a structured confidence score — translating complex legal reasoning into an accessible assessment for non-experts.",
+    tags: ["React", "Python", "Flask", "Machine Learning"],
   },
 ]
 

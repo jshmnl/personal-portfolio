@@ -8,7 +8,7 @@ const experiences = [
     id: "ojt",
     icon: BriefcaseBusiness,
     role: "Full-Stack Developer",
-    org: "Bureau of the Treasury",
+    org: "Bureau of the Treasury (PH)",
     division: "Database Administration Division",
     type: "On-the-Job Training",
     period: "Aug 2025 – Feb 2026",
