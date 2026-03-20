@@ -1,6 +1,6 @@
 "use client"
 
-import { useState } from "react"
+import { useState, useEffect, useRef } from "react"
 import type { CSSProperties } from "react"
 
 import { Button } from "@/components/ui/button"
@@ -30,6 +30,10 @@ import {
   SiExpo,
   SiAndroidstudio,
   SiFigma,
+  SiGit,
+  SiGithub,
+  SiUnity,
+  SiPytorch,
 } from "react-icons/si"
 import { DiJava } from "react-icons/di"
 import { FaDatabase, FaCode } from "react-icons/fa6"
@@ -146,13 +150,34 @@ const skillCategories: { id: string; label: string; skills: Skill[] }[] = [
       { label: "Photoshop", icon: AdobePs, color: "#31A8FF" },
       { label: "Illustrator", icon: AdobeAi, color: "#FF9A00" },
       { label: "VS Code", icon: FaCode as IconComponent, color: "#007ACC" },
+      { label: "Git", icon: SiGit, color: "#F05032" },
+      { label: "GitHub", icon: SiGithub, color: "#181717" },
+      { label: "Unity", icon: SiUnity, color: "#000000" },
+      { label: "PyTorch", icon: SiPytorch, color: "#EE4C2C" },
     ],
   },
 ]
 
 export default function SkillsSection() {
   const [active, setActive] = useState("languages")
-  const activeCategory = skillCategories.find((c) => c.id === active)!
+  const [visible, setVisible] = useState("languages")
+  const [fading, setFading] = useState(false)
+  const timeoutRef = useRef<ReturnType<typeof setTimeout> | null>(null)
+
+  function switchCategory(id: string) {
+    if (id === active) return
+    setFading(true)
+    if (timeoutRef.current) clearTimeout(timeoutRef.current)
+    timeoutRef.current = setTimeout(() => {
+      setActive(id)
+      setVisible(id)
+      setFading(false)
+    }, 180)
+  }
+
+  useEffect(() => () => { if (timeoutRef.current) clearTimeout(timeoutRef.current) }, [])
+
+  const activeCategory = skillCategories.find((c) => c.id === visible)!
 
   return (
     <section
@@ -170,7 +195,7 @@ export default function SkillsSection() {
             <Button
               key={cat.id}
               variant={active === cat.id ? "default" : "neutral"}
-              onClick={() => setActive(cat.id)}
+              onClick={() => switchCategory(cat.id)}
               className="h-full border-2 border-border md:text-xl sm:text-sm text-xs sm:px-4 px-2"
             >
               {cat.label}
@@ -180,7 +205,10 @@ export default function SkillsSection() {
 
         {/* Skill cards with logos */}
         <div className="rounded-base border-2 border-border bg-secondary-background p-6 shadow-shadow">
-          <div className="grid grid-cols-2 sm:grid-cols-3 lg:grid-cols-4 gap-3">
+          <div
+            className="grid grid-cols-2 sm:grid-cols-3 lg:grid-cols-4 gap-3 transition-opacity duration-180 ease-in-out"
+            style={{ opacity: fading ? 0 : 1, transform: fading ? "translateY(6px)" : "translateY(0)", transition: "opacity 180ms ease, transform 180ms ease" }}
+          >
             {activeCategory.skills.map(({ label, icon: Icon, color }) => (
               <div
                 key={label}
