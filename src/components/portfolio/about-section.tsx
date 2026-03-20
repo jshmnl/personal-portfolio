@@ -63,12 +63,7 @@ export default function AboutSection() {
                 <div className="size-9 rounded-base bg-main border-2 border-border flex items-center justify-center text-main-foreground font-heading text-sm shrink-0">
                   J
                 </div>
-                <div>
-                  <h4 className="font-heading text-base leading-none">Who I Am</h4>
-                  <p className="text-xs font-base opacity-50 mt-0.5">
-                    Lyceum of the Philippines Manila
-                  </p>
-                </div>
+                <h4 className="font-heading text-base leading-none">Who I Am</h4>
               </div>
               <p className="text-sm font-base leading-relaxed">
                 I&apos;m Joshua — a full-stack engineer who builds things that matter in the
@@ -88,16 +83,22 @@ export default function AboutSection() {
               </div>
               <div className="flex flex-col gap-4 text-sm font-base leading-relaxed">
                 <p>
-                  At the Bureau of Treasury – Database Administration Division (OJT), I
-                  designed and built a government-grade procurement monitoring system —
-                  architecting the MSSQL schema, implementing role-based access control,
-                  and delivering a compliance-grade audit trail.
+                  During my internship at the Bureau of Treasury (Database Administration
+                  Division), I built a procurement monitoring system used in a government
+                  environment. I designed the MSSQL database schema, implemented
+                  role-based access control to manage internal users securely, and
+                  developed an audit trail system to track all data changes for compliance
+                  and accountability. The system helped organize procurement records and
+                  move parts of the workflow away from manual tracking.
                 </p>
                 <p>
-                  My thesis produced a Philippine labor law case research platform — a
-                  custom rule-based machine learning engine with weighted legal signals
-                  and a normalized confidence scoring system that makes professional-grade
-                  case assessment accessible to anyone.
+                  For my thesis, I developed a Philippine labor law case research platform
+                  aimed at making legal analysis more accessible. I built a rule-based
+                  engine that evaluates cases using weighted legal factors and designed a
+                  scoring system to estimate case relevance and strength. The platform
+                  translates complex legal reasoning into a structured, easy-to-understand
+                  assessment, allowing non-experts to explore and evaluate labor law cases
+                  more effectively.
                 </p>
               </div>
             </div>
