@@ -2,7 +2,7 @@
 
 import { Check, Menu, Palette, X } from "lucide-react"
 import Link from "next/link"
-import { useState } from "react"
+import { useState, useEffect } from "react"
 
 import { ThemeSwitcher } from "@/components/app/theme-switcher"
 import { Button } from "@/components/ui/button"
@@ -61,7 +61,16 @@ const colorSwatches = [
 
 export default function PortfolioNavbar() {
   const [isOpen, setIsOpen] = useState(false)
-  const [activeColor, setActiveColor] = useState("Blue")
+  const [activeColor, setActiveColor] = useState("Orange")
+
+  useEffect(() => {
+    const stored = localStorage.getItem("color")
+    if (stored) {
+      const obj = JSON.parse(stored)
+      const match = colorSwatches.find((s) => s.main === obj.main)
+      if (match) setActiveColor(match.name)
+    }
+  }, [])
 
   const applyTheme = (swatch: (typeof colorSwatches)[0]) => {
     const r = document.querySelector(":root") as HTMLElement

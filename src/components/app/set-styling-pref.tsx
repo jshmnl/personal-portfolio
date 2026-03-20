@@ -2,8 +2,28 @@
 
 import { useLayoutEffect } from "react"
 
+const PORTFOLIO_THEME_VERSION = "orange-v1"
+
+const ORANGE_DEFAULT = {
+  main: "oklch(72.27% 0.1894 50.19)",
+  darkMain: "oklch(67.56% 0.1796 49.61)",
+  bg: "oklch(95.38% 0.0357 72.89)",
+  darkBg: "oklch(26.86% 0.0327 60.06)",
+  chart1: "oklch(72.27% 0.1894 50.19)",
+  chart2: "oklch(67.28% 0.2147 24.22)",
+  chart3: "oklch(86.03% 0.176 92.36)",
+  chart4: "oklch(79.76% 0.2044 153.08)",
+  chart5: "oklch(66.34% 0.1806 277.2)",
+}
+
 export default function SetStylingPref() {
   useLayoutEffect(() => {
+    // Reset to orange default if this is a new version or first visit
+    if (localStorage.getItem("portfolioThemeVersion") !== PORTFOLIO_THEME_VERSION) {
+      localStorage.setItem("portfolioThemeVersion", PORTFOLIO_THEME_VERSION)
+      localStorage.setItem("color", JSON.stringify(ORANGE_DEFAULT))
+    }
+
     const colorObj = JSON.parse(localStorage.getItem("color") as string)
     const borderRadius = localStorage.getItem("borderRadius")
     const boxShadow = localStorage.getItem("boxShadow")?.split(",")
