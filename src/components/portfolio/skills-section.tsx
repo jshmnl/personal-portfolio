@@ -33,6 +33,11 @@ import {
   SiGithub,
   SiUnity,
   SiPytorch,
+  SiGo,
+  SiRuby,
+  SiPowershell,
+  SiFlutter,
+  SiLinux,
 } from "react-icons/si"
 import { DiJava } from "react-icons/di"
 import { FaDatabase, FaCode, FaImage, FaPenNib } from "react-icons/fa6"
@@ -60,6 +65,9 @@ const skillCategories: { id: string; label: string; skills: Skill[] }[] = [
       { label: "Kotlin", icon: SiKotlin, color: "#7F52FF" },
       { label: "C/C++", icon: SiCplusplus, color: "#00599C" },
       { label: "VB.NET", icon: SiDotnet, color: "#512BD4" },
+      { label: "Go", icon: SiGo, color: "#00ADD8" },
+      { label: "Ruby", icon: SiRuby, color: "#CC342D" },
+      { label: "PowerShell", icon: SiPowershell, color: "#5391FE" },
     ],
   },
   {
@@ -107,6 +115,7 @@ const skillCategories: { id: string; label: string; skills: Skill[] }[] = [
       { label: "Expo", icon: SiExpo, color: "#000020" },
       { label: "Android Studio", icon: SiAndroidstudio, color: "#3DDC84" },
       { label: ".NET MAUI", icon: SiDotnet, color: "#512BD4" },
+      { label: "Flutter", icon: SiFlutter, color: "#02569B" },
     ],
   },
   {
@@ -121,6 +130,7 @@ const skillCategories: { id: string; label: string; skills: Skill[] }[] = [
       { label: "GitHub", icon: SiGithub, color: "#181717" },
       { label: "Unity", icon: SiUnity, color: "#000000" },
       { label: "PyTorch", icon: SiPytorch, color: "#EE4C2C" },
+      { label: "Linux CLI", icon: SiLinux, color: "#FCC624" },
     ],
   },
 ]
