@@ -9,6 +9,7 @@ import ExperienceSection from "@/components/portfolio/experience-section"
 import HeroSection from "@/components/portfolio/hero-section"
 import ProjectsSection from "@/components/portfolio/projects-section"
 import SkillsSection from "@/components/portfolio/skills-section"
+import WhatIDoSection from "@/components/portfolio/what-i-do-section"
 
 // Stars — exactly matching the template's marquee arrangement
 import Star8 from "@/components/stars/s8"
@@ -49,6 +50,7 @@ export default function Home() {
         ))}
       </Marquee>
 
+      <WhatIDoSection />
       <AboutSection />
       <SkillsSection />
       <ProjectsSection />
