@@ -35,12 +35,11 @@ import {
   SiPytorch,
   SiGo,
   SiRuby,
-  SiPowershell,
   SiFlutter,
   SiLinux,
 } from "react-icons/si"
 import { DiJava } from "react-icons/di"
-import { FaDatabase, FaCode, FaImage, FaPenNib } from "react-icons/fa6"
+import { FaDatabase, FaCode, FaImage, FaPenNib, FaTerminal } from "react-icons/fa6"
 
 
 type IconComponent = React.ComponentType<{ className?: string }>
@@ -67,7 +66,7 @@ const skillCategories: { id: string; label: string; skills: Skill[] }[] = [
       { label: "VB.NET", icon: SiDotnet, color: "#512BD4" },
       { label: "Go", icon: SiGo, color: "#00ADD8" },
       { label: "Ruby", icon: SiRuby, color: "#CC342D" },
-      { label: "PowerShell", icon: SiPowershell, color: "#5391FE" },
+      { label: "PowerShell", icon: FaTerminal as IconComponent, color: "#5391FE" },
     ],
   },
   {
