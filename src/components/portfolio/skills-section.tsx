@@ -42,11 +42,13 @@ import { FaDatabase, FaCode } from "react-icons/fa6"
 function AdobePs({ style, className }: { style?: CSSProperties; className?: string }) {
   return (
     <svg width="1em" height="1em" viewBox="0 0 24 24" className={className} style={style}>
-      <rect width="24" height="24" rx="3" fill="currentColor" fillOpacity="0.15" />
+      <rect width="24" height="24" rx="3" fill="#111111" />
       <text
         x="12" y="17"
         textAnchor="middle"
-        fill="currentColor"
+        fill="none"
+        stroke="white"
+        strokeWidth="0.5"
         fontSize="9.5"
         fontFamily="Arial, sans-serif"
         fontWeight="bold"
@@ -58,11 +60,13 @@ function AdobePs({ style, className }: { style?: CSSProperties; className?: stri
 function AdobeAi({ style, className }: { style?: CSSProperties; className?: string }) {
   return (
     <svg width="1em" height="1em" viewBox="0 0 24 24" className={className} style={style}>
-      <rect width="24" height="24" rx="3" fill="currentColor" fillOpacity="0.15" />
+      <rect width="24" height="24" rx="3" fill="#111111" />
       <text
         x="12" y="17"
         textAnchor="middle"
-        fill="currentColor"
+        fill="none"
+        stroke="white"
+        strokeWidth="0.5"
         fontSize="9.5"
         fontFamily="Arial, sans-serif"
         fontWeight="bold"
