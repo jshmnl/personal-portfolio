@@ -42,11 +42,11 @@ import { FaDatabase, FaCode } from "react-icons/fa6"
 function AdobePs({ style, className }: { style?: CSSProperties; className?: string }) {
   return (
     <svg width="1em" height="1em" viewBox="0 0 24 24" className={className} style={style}>
-      <rect width="24" height="24" rx="3" fill="#001E36" />
+      <rect width="24" height="24" rx="3" fill="currentColor" fillOpacity="0.15" />
       <text
         x="12" y="17"
         textAnchor="middle"
-        fill="#31A8FF"
+        fill="currentColor"
         fontSize="9.5"
         fontFamily="Arial, sans-serif"
         fontWeight="bold"
@@ -58,11 +58,11 @@ function AdobePs({ style, className }: { style?: CSSProperties; className?: stri
 function AdobeAi({ style, className }: { style?: CSSProperties; className?: string }) {
   return (
     <svg width="1em" height="1em" viewBox="0 0 24 24" className={className} style={style}>
-      <rect width="24" height="24" rx="3" fill="#310000" />
+      <rect width="24" height="24" rx="3" fill="currentColor" fillOpacity="0.15" />
       <text
         x="12" y="17"
         textAnchor="middle"
-        fill="#FF9A00"
+        fill="currentColor"
         fontSize="9.5"
         fontFamily="Arial, sans-serif"
         fontWeight="bold"
@@ -209,12 +209,12 @@ export default function SkillsSection() {
             className="grid grid-cols-2 sm:grid-cols-3 lg:grid-cols-4 gap-3 transition-opacity duration-180 ease-in-out"
             style={{ opacity: fading ? 0 : 1, transform: fading ? "translateY(6px)" : "translateY(0)", transition: "opacity 180ms ease, transform 180ms ease" }}
           >
-            {activeCategory.skills.map(({ label, icon: Icon, color }) => (
+            {activeCategory.skills.map(({ label, icon: Icon }) => (
               <div
                 key={label}
                 className="flex items-center gap-3 rounded-base border-2 border-border bg-background px-4 py-3 shadow-shadow"
               >
-                <Icon style={{ color }} className="shrink-0 text-2xl" />
+                <Icon className="shrink-0 text-2xl" />
                 <span className="font-base text-sm font-medium">{label}</span>
               </div>
             ))}
