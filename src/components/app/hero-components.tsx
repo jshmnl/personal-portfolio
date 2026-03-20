@@ -355,14 +355,14 @@ const CollapsibleExample = () => (
       </CollapsibleTrigger>
     </div>
     <div className="rounded-base border-2 border-border bg-main px-4 py-3 font-mono font-base text-main-foreground text-sm">
-      @radix-ui/primitives
+      jshmnl/personal-portfolio
     </div>
     <CollapsibleContent className="space-y-2 text-main-foreground font-base">
       <div className="rounded-base border-2 border-border bg-main px-4 py-3 font-mono text-sm">
-        @radix-ui/colors
+        jshmnl/procurement-system
       </div>
       <div className="rounded-base border-2 border-border bg-main px-4 py-3 font-mono text-sm">
-        @stitches/react
+        jshmnl/labor-law-predictor
       </div>
     </CollapsibleContent>
   </Collapsible>
