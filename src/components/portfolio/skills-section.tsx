@@ -1,7 +1,6 @@
 "use client"
 
 import { useState, useEffect, useRef } from "react"
-import type { CSSProperties } from "react"
 
 import { Button } from "@/components/ui/button"
 import {
@@ -36,46 +35,10 @@ import {
   SiPytorch,
 } from "react-icons/si"
 import { DiJava } from "react-icons/di"
-import { FaDatabase, FaCode } from "react-icons/fa6"
+import { FaDatabase, FaCode, FaImage, FaPenNib } from "react-icons/fa6"
 
-// Adobe-style badge icons (dark bg + product abbreviation in brand color)
-function AdobePs({ style, className }: { style?: CSSProperties; className?: string }) {
-  return (
-    <svg width="1em" height="1em" viewBox="0 0 24 24" className={className} style={style}>
-      <rect width="24" height="24" rx="3" fill="#111111" />
-      <text
-        x="12" y="17"
-        textAnchor="middle"
-        fill="none"
-        stroke="white"
-        strokeWidth="0.5"
-        fontSize="9.5"
-        fontFamily="Arial, sans-serif"
-        fontWeight="bold"
-      >Ps</text>
-    </svg>
-  )
-}
 
-function AdobeAi({ style, className }: { style?: CSSProperties; className?: string }) {
-  return (
-    <svg width="1em" height="1em" viewBox="0 0 24 24" className={className} style={style}>
-      <rect width="24" height="24" rx="3" fill="#111111" />
-      <text
-        x="12" y="17"
-        textAnchor="middle"
-        fill="none"
-        stroke="white"
-        strokeWidth="0.5"
-        fontSize="9.5"
-        fontFamily="Arial, sans-serif"
-        fontWeight="bold"
-      >Ai</text>
-    </svg>
-  )
-}
-
-type IconComponent = React.ComponentType<{ style?: CSSProperties; className?: string }>
+type IconComponent = React.ComponentType<{ className?: string }>
 
 type Skill = {
   label: string
@@ -151,8 +114,8 @@ const skillCategories: { id: string; label: string; skills: Skill[] }[] = [
     label: "Design & Tools",
     skills: [
       { label: "Figma", icon: SiFigma, color: "#F24E1E" },
-      { label: "Photoshop", icon: AdobePs, color: "#31A8FF" },
-      { label: "Illustrator", icon: AdobeAi, color: "#FF9A00" },
+      { label: "Photoshop", icon: FaImage as IconComponent, color: "#31A8FF" },
+      { label: "Illustrator", icon: FaPenNib as IconComponent, color: "#FF9A00" },
       { label: "VS Code", icon: FaCode as IconComponent, color: "#007ACC" },
       { label: "Git", icon: SiGit, color: "#F05032" },
       { label: "GitHub", icon: SiGithub, color: "#181717" },
