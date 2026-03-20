@@ -39,6 +39,14 @@ export default function RootLayout({
 }) {
   return (
     <html className="scroll-smooth" suppressHydrationWarning lang="en">
+      <head>
+        {/* Apply stored color theme before first paint to prevent flash */}
+        <script
+          dangerouslySetInnerHTML={{
+            __html: `(function(){try{var c=JSON.parse(localStorage.getItem('color'));if(c){var r=document.documentElement;var d=r.classList.contains('dark');r.style.setProperty('--main',d?c.darkMain:c.main);r.style.setProperty('--background',d?c.darkBg:c.bg);r.style.setProperty('--light-main',c.main);r.style.setProperty('--dark-main',c.darkMain);r.style.setProperty('--light-background',c.bg);r.style.setProperty('--dark-background',c.darkBg);}}catch(e){}}())`,
+          }}
+        />
+      </head>
       <body className={dmSans.className}>
         <ThemeProvider
           attribute="class"
