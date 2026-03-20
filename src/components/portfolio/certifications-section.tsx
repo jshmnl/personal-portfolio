@@ -1,4 +1,4 @@
-import { Users, Monitor, Globe, BookOpen, Paintbrush } from "lucide-react"
+import { Users, Monitor, Globe, BookOpen, Paintbrush, Sparkles } from "lucide-react"
 
 import { Badge } from "@/components/ui/badge"
 import {
@@ -39,6 +39,12 @@ const certifications = [
     date: "December 2024",
     title: "National Certificate III in Visual Graphic Design",
     issuer: "TESDA National Assessment",
+  },
+  {
+    icon: Sparkles,
+    date: "February 2026",
+    title: "AI Amplified Scholar Certificate",
+    issuer: "Philippine Coding Camp · InnoVision 2026 Campus Series",
   },
 ]
 
