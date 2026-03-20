@@ -1,32 +1,43 @@
-import { Code2, Monitor, Paintbrush } from "lucide-react"
+import { Users, Monitor, Globe, BookOpen, Paintbrush } from "lucide-react"
 
-import { Badge } from "@/components/ui/badge"
-import {
-  Card,
-  CardContent,
-  CardHeader,
-  CardTitle,
-} from "@/components/ui/card"
+import { Alert, AlertDescription, AlertTitle } from "@/components/ui/alert"
+import { Button } from "@/components/ui/button"
 
 const certifications = [
   {
-    icon: Code2,
-    date: "May 2024",
-    title: "IT Specialist — Java",
-    issuer: "Certiport / Pearson VUE",
-  },
-  {
-    icon: Paintbrush,
-    date: "December 2023",
-    title: "Visual Graphic Design",
-    subtitle: "National Certificate III",
-    issuer: "Technical Education and Skills Development Authority (TESDA)",
+    icon: Users,
+    org: "Junior Philippine Computer Society",
+    type: "Seminar",
+    name: "Emerge: Ways to Cope with the ever-changing Technology in the Future",
+    date: "October 2022",
   },
   {
     icon: Monitor,
+    org: "IC3 Digital Literacy Certification",
+    type: "Technical Certification",
+    name: "IC3 GS5 Computing Fundamentals (Office 2016)",
     date: "January 2023",
-    title: "IC3 GS5 — Computing Fundamentals",
-    issuer: "Certiport / IC3",
+  },
+  {
+    icon: Globe,
+    org: "Test of English for International Communication",
+    type: "Language Certification",
+    name: "Certificate in English Proficiency",
+    date: "December 2023",
+  },
+  {
+    icon: BookOpen,
+    org: "Lyceum Computer Society",
+    type: "Seminar",
+    name: "Behind Blockchain, Digital Currency, Cloud Gaming, Data Analytics",
+    date: "April 2024",
+  },
+  {
+    icon: Paintbrush,
+    org: "TESDA National Assessment",
+    type: "Government Certification",
+    name: "National Certificate III in Visual Graphic Design",
+    date: "December 2024",
   },
 ]
 
@@ -41,29 +52,32 @@ export default function CertificationsSection() {
           Certifications
         </h2>
 
-        <div className="grid grid-cols-1 md:grid-cols-3 gap-6">
-          {certifications.map((cert, index) => (
-            <Card key={index}>
-              <CardHeader>
-                <div className="size-11 rounded-base bg-main border-2 border-border flex items-center justify-center text-main-foreground mb-4 shadow-shadow">
-                  <cert.icon className="size-5" />
+        <div className="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-3 gap-6">
+          {certifications.map((cert) => (
+            <div
+              key={cert.name}
+              className="bg-background border-2 border-border rounded-base shadow-shadow flex flex-col justify-between sm:p-8 p-4 gap-6 bg-[linear-gradient(to_right,#80808033_1px,transparent_1px),linear-gradient(to_bottom,#80808033_1px,transparent_1px)] bg-[size:30px_30px]"
+            >
+              {/* Issuer */}
+              <Alert>
+                <cert.icon />
+                <AlertTitle>{cert.org}</AlertTitle>
+                <AlertDescription>{cert.type}</AlertDescription>
+              </Alert>
+
+              {/* Certification / event name */}
+              <div className="rounded-base border-2 border-border overflow-hidden shadow-shadow">
+                <div className="bg-main text-main-foreground px-4 py-3 font-heading text-sm leading-snug">
+                  {cert.name}
                 </div>
-                <Badge className="w-fit mb-3">{cert.date}</Badge>
-                <CardTitle className="text-base font-heading leading-snug">
-                  {cert.title}
-                </CardTitle>
-                {cert.subtitle && (
-                  <p className="text-xs font-base mt-0.5 text-foreground/70">
-                    {cert.subtitle}
-                  </p>
-                )}
-              </CardHeader>
-              <CardContent>
-                <p className="text-sm font-base text-foreground/70 leading-snug">
-                  {cert.issuer}
-                </p>
-              </CardContent>
-            </Card>
+              </div>
+
+              {/* Footer — date */}
+              <div className="flex items-center justify-between gap-2 flex-wrap">
+                <Button size="sm" variant="default">{cert.type}</Button>
+                <span className="text-xs font-base opacity-50 shrink-0">{cert.date}</span>
+              </div>
+            </div>
           ))}
         </div>
       </div>
