@@ -3,7 +3,7 @@
 import { ArrowUpRight, ExternalLink } from "lucide-react"
 import Link from "next/link"
 
-import HeroComponents from "@/components/app/hero-components"
+import HeroPersonalCards from "@/components/portfolio/hero-personal-cards"
 import Star9 from "@/components/stars/s9"
 import Star14 from "@/components/stars/s14"
 import Star20 from "@/components/stars/s20"
@@ -16,9 +16,9 @@ export default function HeroSection() {
       id="home"
       className="relative flex min-h-[100dvh] flex-col overflow-hidden items-center justify-center bg-background px-5 md:py-[200px] py-[100px] bg-[linear-gradient(to_right,#80808033_1px,transparent_1px),linear-gradient(to_bottom,#80808033_1px,transparent_1px)] bg-[size:70px_70px]"
     >
-      {/* Side scrolling component cards — exact replica of template */}
-      <HeroComponents className="xl:-left-[130px] md:-left-[200px] lg:block hidden" />
-      <HeroComponents
+      {/* Side scrolling personal info cards */}
+      <HeroPersonalCards className="xl:-left-[130px] md:-left-[200px] lg:block hidden" />
+      <HeroPersonalCards
         className="xl:-right-[130px] md:-right-[200px] lg:block hidden"
         reverse
       />
