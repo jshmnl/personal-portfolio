@@ -1,4 +1,4 @@
-import { GraduationCap } from "lucide-react"
+import { GraduationCap, Briefcase } from "lucide-react"
 import Image from "next/image"
 
 import Star14 from "@/components/stars/s14"
@@ -30,14 +30,11 @@ export default function AboutSection() {
           About Me
         </h2>
 
-        {/* 5-column grid: photo takes 2, info cards take 3 — mirrors the template's 3-col review layout */}
         <div className="grid grid-cols-1 lg:grid-cols-5 gap-6 lg:gap-8 items-start">
 
           {/* ── Left: profile photo card ── */}
           <div className="lg:col-span-2">
             <div className="rounded-base border-2 border-border bg-background shadow-shadow overflow-hidden">
-
-              {/* Square portrait photo */}
               <div className="w-full aspect-square overflow-hidden border-b-2 border-border">
                 <Image
                   src="/profile.jpg"
@@ -48,21 +45,11 @@ export default function AboutSection() {
                   priority
                 />
               </div>
-
-              {/* Identity footer */}
               <div className="p-5">
                 <h3 className="font-heading text-xl mb-0.5">Joshua Manuel</h3>
-                <p className="text-sm font-base opacity-60 mb-4">
+                <p className="text-sm font-base opacity-60">
                   Full-Stack Developer · Software Engineer
                 </p>
-                <div className="flex flex-wrap gap-2">
-                  <span className="rounded-base border-2 border-border bg-main text-main-foreground px-2.5 py-1 text-xs font-heading shadow-shadow">
-                    5× Dean&apos;s Lister
-                  </span>
-                  <span className="rounded-base border-2 border-border bg-background px-2.5 py-1 text-xs font-base shadow-shadow">
-                    B.S. Computer Science
-                  </span>
-                </div>
               </div>
             </div>
           </div>
@@ -77,20 +64,42 @@ export default function AboutSection() {
                   J
                 </div>
                 <div>
-                  <h4 className="font-heading text-base leading-none">
-                    Who I Am
-                  </h4>
+                  <h4 className="font-heading text-base leading-none">Who I Am</h4>
                   <p className="text-xs font-base opacity-50 mt-0.5">
                     Lyceum of the Philippines Manila
                   </p>
                 </div>
               </div>
               <p className="text-sm font-base leading-relaxed">
-                Full-stack engineer dedicated to delivering scalable web and
-                mobile solutions. I transform complex business requirements into
-                high-performance, production-ready applications — from designing
-                clean APIs to shipping pixel-perfect frontends.
+                I&apos;m Joshua — a full-stack engineer who builds things that matter in the
+                real world. I&apos;ve shipped a government procurement system for the Bureau
+                of Treasury and a Philippine labor law research platform powered by a custom
+                ML engine. I care about code that holds up under real pressure.
               </p>
+            </div>
+
+            {/* What I've Built */}
+            <div className="rounded-base border-2 border-border bg-background p-5 shadow-shadow">
+              <div className="flex items-center gap-3 mb-4">
+                <div className="size-9 rounded-base bg-main border-2 border-border flex items-center justify-center text-main-foreground shrink-0">
+                  <Briefcase className="size-4" />
+                </div>
+                <h4 className="font-heading text-base">What I&apos;ve Built</h4>
+              </div>
+              <div className="flex flex-col gap-4 text-sm font-base leading-relaxed">
+                <p>
+                  At the Bureau of Treasury – Database Administration Division (OJT), I
+                  designed and built a government-grade procurement monitoring system —
+                  architecting the MSSQL schema, implementing role-based access control,
+                  and delivering a compliance-grade audit trail.
+                </p>
+                <p>
+                  My thesis produced a Philippine labor law case research platform — a
+                  custom rule-based machine learning engine with weighted legal signals
+                  and a normalized confidence scoring system that makes professional-grade
+                  case assessment accessible to anyone.
+                </p>
+              </div>
             </div>
 
             {/* Education */}
@@ -114,28 +123,6 @@ export default function AboutSection() {
                 <span className="text-xs font-base opacity-50">
                   Consistent Academic Excellence
                 </span>
-              </div>
-            </div>
-
-            {/* At a Glance */}
-            <div className="rounded-base border-2 border-border bg-background p-5 shadow-shadow">
-              <h4 className="font-heading text-base mb-5">At a Glance</h4>
-              <div className="grid grid-cols-3 sm:grid-cols-3 gap-x-6 gap-y-5">
-                {[
-                  { stat: "9+", label: "Languages" },
-                  { stat: "10+", label: "Frameworks" },
-                  { stat: "3", label: "Certifications" },
-                  { stat: "2", label: "Major Projects" },
-                  { stat: "5×", label: "Dean's List" },
-                  { stat: "6 mo", label: "OJT Experience" },
-                ].map(({ stat, label }) => (
-                  <div key={label}>
-                    <p className="font-heading 2xl:text-2xl text-xl leading-none">
-                      {stat}
-                    </p>
-                    <p className="text-xs font-base opacity-50 mt-1">{label}</p>
-                  </div>
-                ))}
               </div>
             </div>
 
