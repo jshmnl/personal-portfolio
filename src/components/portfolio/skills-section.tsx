@@ -7,7 +7,7 @@ import {
   SiTypescript,
   SiJavascript,
   SiPhp,
-  SiCsharp,
+  SiSharp,
   SiPython,
   SiKotlin,
   SiCplusplus,
@@ -15,7 +15,6 @@ import {
   SiReact,
   SiNextdotjs,
   SiHtml5,
-  SiCss3,
   SiTailwindcss,
   SiAlpinedotjs,
   SiLaravel,
@@ -24,17 +23,14 @@ import {
   SiFlask,
   SiPostgresql,
   SiMysql,
-  SiMicrosoftsqlserver,
   SiSupabase,
   SiFirebase,
   SiExpo,
   SiAndroidstudio,
   SiFigma,
-  SiAdobephotoshop,
-  SiAdobeillustrator,
-  SiVisualstudiocode,
 } from "react-icons/si"
 import { DiJava } from "react-icons/di"
+import { FaDatabase, FaCode, FaImage, FaPenNib } from "react-icons/fa6"
 import { IconType } from "react-icons"
 
 type Skill = {
@@ -51,7 +47,7 @@ const skillCategories: { id: string; label: string; skills: Skill[] }[] = [
       { label: "TypeScript", icon: SiTypescript, color: "#3178C6" },
       { label: "JavaScript", icon: SiJavascript, color: "#F7DF1E" },
       { label: "PHP", icon: SiPhp, color: "#777BB4" },
-      { label: "C#", icon: SiCsharp, color: "#239120" },
+      { label: "C#", icon: SiSharp, color: "#239120" },
       { label: "Python", icon: SiPython, color: "#3776AB" },
       { label: "Java", icon: DiJava, color: "#E76F00" },
       { label: "Kotlin", icon: SiKotlin, color: "#7F52FF" },
@@ -66,7 +62,7 @@ const skillCategories: { id: string; label: string; skills: Skill[] }[] = [
       { label: "React", icon: SiReact, color: "#61DAFB" },
       { label: "Next.js", icon: SiNextdotjs, color: "#000000" },
       { label: "HTML", icon: SiHtml5, color: "#E34F26" },
-      { label: "CSS", icon: SiCss3, color: "#1572B6" },
+      { label: "CSS", icon: FaCode, color: "#1572B6" },
       { label: "Tailwind CSS", icon: SiTailwindcss, color: "#06B6D4" },
       { label: "Alpine.js", icon: SiAlpinedotjs, color: "#8BC0D0" },
     ],
@@ -90,8 +86,8 @@ const skillCategories: { id: string; label: string; skills: Skill[] }[] = [
     skills: [
       { label: "PostgreSQL", icon: SiPostgresql, color: "#4169E1" },
       { label: "MySQL", icon: SiMysql, color: "#4479A1" },
-      { label: "MSSQL", icon: SiMicrosoftsqlserver, color: "#CC2927" },
-      { label: "SQL Server", icon: SiMicrosoftsqlserver, color: "#CC2927" },
+      { label: "MSSQL", icon: FaDatabase, color: "#CC2927" },
+      { label: "SQL Server", icon: FaDatabase, color: "#CC2927" },
       { label: "Supabase", icon: SiSupabase, color: "#3ECF8E" },
       { label: "Firebase", icon: SiFirebase, color: "#FFCA28" },
     ],
@@ -111,9 +107,9 @@ const skillCategories: { id: string; label: string; skills: Skill[] }[] = [
     label: "Design & Tools",
     skills: [
       { label: "Figma", icon: SiFigma, color: "#F24E1E" },
-      { label: "Photoshop", icon: SiAdobephotoshop, color: "#31A8FF" },
-      { label: "Illustrator", icon: SiAdobeillustrator, color: "#FF9A00" },
-      { label: "VS Code", icon: SiVisualstudiocode, color: "#007ACC" },
+      { label: "Photoshop", icon: FaImage, color: "#31A8FF" },
+      { label: "Illustrator", icon: FaPenNib, color: "#FF9A00" },
+      { label: "VS Code", icon: FaCode, color: "#007ACC" },
     ],
   },
 ]
